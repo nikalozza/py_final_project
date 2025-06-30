@@ -8,7 +8,6 @@ class TestNewsArticleModel(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        # Use in-memory SQLite for testing
         cls.engine = create_engine('sqlite:///:memory:')
         Base.metadata.create_all(cls.engine)
         cls.Session = sessionmaker(bind=cls.engine)

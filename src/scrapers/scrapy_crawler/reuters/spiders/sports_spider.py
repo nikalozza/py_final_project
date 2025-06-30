@@ -10,7 +10,6 @@ class SportsSpider(scrapy.Spider):
     start_urls = ["https://www.aljazeera.com/sports/"]
 
     def parse(self, response):
-        # Extract article links
         article_links = response.css('a[href^="/sports/"]::attr(href)').getall()
         full_links = [
             response.urljoin(link)
@@ -40,7 +39,6 @@ class SportsSpider(scrapy.Spider):
         else:
             item["published"] = None
 
-        # Optional summary using the first 300 characters of article body
         paragraphs = response.css("article p::text").getall()
         summary = " ".join(paragraphs).strip()
         item["summary"] = summary[:300] if summary else ""

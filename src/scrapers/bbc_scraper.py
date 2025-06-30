@@ -41,7 +41,6 @@ def scrape_bbc():
         )
         existing = db.query(NewsArticle).filter_by(link=news.link).first()
         if existing:
-    # Optional: update fields (if needed)
             existing.title = news.title
             existing.source = news.source
             existing.published = news.published

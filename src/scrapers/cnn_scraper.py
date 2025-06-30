@@ -10,10 +10,9 @@ from src.data.database import db
 from src.data.models import NewsArticle
 import time
 
-# ... same imports and setup as before ...
 
 def scrape_cnn():
-    url = "https://edition.cnn.com/world/europe"  # you're now using the Europe section
+    url = "https://edition.cnn.com/world/europe" 
 
     chrome_options = Options()
     chrome_options.add_argument("--headless")
@@ -58,7 +57,6 @@ def scrape_cnn():
             )
             existing = db.query(NewsArticle).filter_by(link=news.link).first()
             if existing:
-    # Optional: update fields (if needed)
                 existing.title = news.title
                 existing.source = news.source
                 existing.published = news.published

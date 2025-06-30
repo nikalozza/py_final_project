@@ -59,7 +59,7 @@ def scrape_blog():
             )
 
             db.add(news)
-            db.flush()  # Try inserting to catch integrity errors early
+            db.flush()
             article_count += 1
 
         except IntegrityError:

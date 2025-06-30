@@ -25,7 +25,6 @@ def scrape_nyt_rss():
         )
         existing = db.query(NewsArticle).filter_by(link=article.link).first()
         if existing:
-    # Optional: update fields (if needed)
             existing.title = article.title
             existing.source = article.source
             existing.published = article.published

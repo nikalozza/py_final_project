@@ -1,5 +1,5 @@
 from src.data.models import NewsArticle
-from src.data.database import db  # your SQLAlchemy session
+from src.data.database import db  
 
 class AlJazeeraPipeline:
     def process_item(self, item, spider):

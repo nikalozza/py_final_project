@@ -6,7 +6,6 @@ from src.scrapers import cnn_scraper, bbc_scraper, nyt_rss_scraper, blog_scraper
 class TestScrapers(unittest.TestCase):
 
     def setUp(self):
-        # Count existing articles to detect increase
         self.initial_count = db.query(NewsArticle).count()
 
     def test_cnn_scraper(self):
