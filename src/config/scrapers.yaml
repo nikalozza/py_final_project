@@ -1,0 +1,6 @@
+scrapers:
+  - src.scrapers.cnn_scraper.scrape_cnn
+  - src.scrapers.bbc_scraper.scrape_bbc
+  - src.scrapers.nyt_rss_scraper.scrape_nyt_rss
+  - src.scrapers.blog_scraper.scrape_blog
+  - src.scrapers.session_scraper.scrape_with_session

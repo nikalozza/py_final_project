@@ -1,0 +1,11 @@
+beautifulsoup4
+requests
+selenium
+feedparser
+sqlalchemy
+psycopg2-binary
+pandas
+matplotlib
+PyYAML
+click
+pytest

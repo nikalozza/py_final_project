@@ -1,0 +1,2 @@
+database:
+  url: postgresql+psycopg2://postgres:niko@localhost:5432/final_project_db
